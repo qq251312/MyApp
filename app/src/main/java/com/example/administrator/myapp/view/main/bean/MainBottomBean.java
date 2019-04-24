@@ -2,6 +2,7 @@ package com.example.administrator.myapp.view.main.bean;
 
 public class MainBottomBean  {
     private String title;
+    private boolean select;
     private int select_url;
     private int unselect_url;
 
@@ -17,6 +18,14 @@ public class MainBottomBean  {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean isSelect() {
+        return select;
+    }
+
+    public void setSelect(boolean select) {
+        this.select = select;
     }
 
     public int getSelect_url() {

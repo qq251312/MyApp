@@ -10,6 +10,8 @@ import android.widget.FrameLayout;
 
 import com.example.administrator.myapp.R;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity extends AppCompatActivity {
     protected View mContentView;
     protected FrameLayout mContentFrame;
@@ -21,6 +23,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mContentView = LayoutInflater.from(this).inflate(getLayoutId(),null);
         mContentFrame = findViewById(R.id.root_frame);
         mContentFrame.addView(mContentView);
+        ButterKnife.bind(this);
         initView();
     }
 
